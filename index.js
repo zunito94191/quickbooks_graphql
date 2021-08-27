@@ -6,7 +6,7 @@ const database = require('./config/database');
 const port = 3000;
 
 mongoose.Promise = global.Promise;
-mongoose.connect(database.mongoConnectionString,{ useNewUrlParser: true },(err) => {
+mongoose.connect(database.mongoConnectionString,{ useNewUrlParser: false },(err) => {
     if(err) {
         console.log(err);
     } else {
